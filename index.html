@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Inserte los km marcados en Google Maps desde el establecimiento hacia el destino
+    </p>
+    <input type="text" id="numero1" >
+
+    <button onclick="sumar()">CALCULAR TARIFA</button>
+    <p>
+        NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km, SI INGRESA
+        UN KILOMETRAJE MAYOR, TOME ÚNICAMENTE COMO REFERENCIA.
+    </p>
+    <script>
+        function sumar(){
+        var km;
+        var numero1 = document.getElementById("numero1").value;
+        km = Math.round(30.159*Math.exp(0.0478*numero1)*2)/2;
+        alert("POR " + numero1 +" km SE DEBERÍAN COBRAR $" + km + " PESOS");
+
+
+        alert("Por un viaje de " + numero1 + " km se deberían cobrar $" + suma +" pesos");
+        }
+    </script>
+</body>
+</html>
