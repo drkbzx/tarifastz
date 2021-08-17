@@ -26,6 +26,20 @@
         <button onclick="sumar()">CALCULAR TARIFA</button>
     </div>
     
+    <form class="form-inline">
+  <label class="sr-only" for="inlineFormInputName2">Name</label>
+  <input type="text" id="numero1" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Ingresa los km">
+
+  <div class="form-check mb-2 mr-sm-2">
+    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+    <label class="form-check-label" for="inlineFormCheck">
+      ¿Es fuera de zona conurbada?
+    </label>
+  </div>
+
+  <button type="submit" onclick="sumar()" class="btn btn-primary mb-2">Calcular tarifa</button>
+</form>
+    
     <p>
         NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km, SI INGRESA
         UN KILOMETRAJE MAYOR, TOME ÚNICAMENTE COMO REFERENCIA.
