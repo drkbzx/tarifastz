@@ -14,13 +14,13 @@
             Inserte los km marcados en Google Maps desde el establecimiento hacia el destino
         </p>
         <form class="form-inline">
-            <input type="number" step="any" id="numero1" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Ingresa los km">
+            <input type="number" step="any" id="numero1" class="form-control mb-2 mr-sm-2 input-lg" placeholder="Ingresa los km">
             <div class="form-check mb-2 mr-sm-2">
                 <label class="form-check-label" for="inlineFormCheck">
                     ¿Es fuera de zona conurbada?
                 </label>
-            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-            <button type="button" onclick="document.getElementById('demo').innerHTML = 'Por los km ingresados se deberían cobrar: $' +sumar() + ' pesos'" class="btn btn-primary mb-2">Calcular tarifa</button>
+            <input class="form-check-input" type="checkbox" id="fueraDeZona">
+            <button type="button" onclick="document.getElementById('demo').innerHTML = 'Por los km ingresados se deberían cobrar: $' +sumar() + 'pesos'" class="btn btn-primary mb-2">Calcular tarifa</button>
         </form>
         <p>
             NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km, SI INGRESA
@@ -32,10 +32,14 @@
         function sumar(){
         var km, a = 30.0 , b = 0.0699, c = 0.905;
         var numero1 = document.getElementById("numero1").value;
-        //km = Math.round(a*Math.pow(Math.E,b*Math.pow(numero1+c,2))*2)/2;
-        //km = Math.round(a*Math.pow(Math.E,b*Math.pow(numero1+c,2))*2)/2;
-        //km = Math.round(30.159*Math.exp(0.0478*numero1)*2)/2;
-        km = Math.round(29*Math.exp(Math.pow(0.0569*numero1, 0.89))*2)/2;
+        var fdz = document.getElementById("fueraDeZona").checked;
+        console.log(fdz);
+        if(fdz == true){
+            km = Math.round(29*Math.exp(Math.pow(0.0569*numero1*1.25, 0.89))*2)/2;
+        }else{
+            km = Math.round(29*Math.exp(Math.pow(0.0569*numero1, 0.89))*2)/2;
+        }
+        
         return km;
         //console.log(Math.round(29*Math.exp(Math.pow(0.0569*numero1, 0.89))*2)/2);
         //alert("POR " + numero1 +" km SE DEBERÍAN COBRAR $" + km + " PESOS");
