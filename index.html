@@ -10,27 +10,22 @@
 <body>
     
     <div class="mx-auto" style="width: 90%; margin-top: 40%;">
-    <p>
-        Inserte los km marcados en Google Maps desde el establecimiento hacia el destino
-    </p>
-    <form class="form-inline">
-        <input type="number" pattern="^[0-9]*$" id="numero1" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Ingresa los km">
- 
-
-        <div class="form-check mb-2 mr-sm-2">
-            <label class="form-check-label" for="inlineFormCheck">
-                ¿Es fuera de zona conurbada?
-            </label>
+        <p>
+            Inserte los km marcados en Google Maps desde el establecimiento hacia el destino
+        </p>
+        <form class="form-inline">
+            <input type="number" pattern="^[0-9]*$" id="numero1" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Ingresa los km">
+            <div class="form-check mb-2 mr-sm-2">
+                <label class="form-check-label" for="inlineFormCheck">
+                    ¿Es fuera de zona conurbada?
+                </label>
             <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-        </div>
-
-        <button type="submit" onclick="sumar()" class="btn btn-primary mb-2">Calcular tarifa</button>
-    </form>
-    
-    <p>
-        NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km, SI INGRESA
-        UN KILOMETRAJE MAYOR, TOME ÚNICAMENTE COMO REFERENCIA.
-    </p>
+            <button type="submit" onclick="sumar()" class="btn btn-primary mb-2">Calcular tarifa</button>
+        </form>
+        <p>
+            NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km, SI INGRESA
+            UN KILOMETRAJE MAYOR, TOME ÚNICAMENTE COMO REFERENCIA.
+        </p>
     </div>
     <script>
         function sumar(){
