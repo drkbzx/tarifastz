@@ -19,9 +19,10 @@
     </p>
     <script>
         function sumar(){
-        var km;
+        var km, a = 30.0 , b = 0.0699, c = 0.905;
         var numero1 = document.getElementById("numero1").value;
-        km = Math.round(30.159*Math.exp(0.0478*numero1)*2)/2;
+        km = Math.round(a * Math.pow(Math.E,b * Math.pow(numero1 + c, 2))* 2) / 2;
+        //km = Math.round(30.159*Math.exp(0.0478*numero1)*2)/2;
         alert("POR " + numero1 +" km SE DEBERÍAN COBRAR $" + km + " PESOS");
 
 
