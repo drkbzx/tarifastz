@@ -26,8 +26,8 @@
             NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km, SI INGRESA
             UN KILOMETRAJE MAYOR, TOME ÚNICAMENTE COMO REFERENCIA.
         </p>
-        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()"> Click me to display Date and Time. </button>
-        <p id="demo"></p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = sumar()"> Click me to display Date and Time. </button>
+        <h2 id="demo"></h2>
     </div>
     <script>
         function sumar(){
@@ -37,6 +37,7 @@
         //km = Math.round(a*Math.pow(Math.E,b*Math.pow(numero1+c,2))*2)/2;
         //km = Math.round(30.159*Math.exp(0.0478*numero1)*2)/2;
         km = Math.round(29*Math.exp(Math.pow(0.0569*numero1, 0.89))*2)/2;
+        return km;
         console.log(Math.round(29*Math.exp(Math.pow(0.0569*numero1, 0.89))*2)/2);
         alert("POR " + numero1 +" km SE DEBERÍAN COBRAR $" + km + " PESOS");
         }
