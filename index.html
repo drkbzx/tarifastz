@@ -20,13 +20,12 @@
                     ¿Es fuera de zona conurbada?
                 </label>
             <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-            <button type="submit" onclick="sumar()" class="btn btn-primary mb-2">Calcular tarifa</button>
+            <button type="button" onclick="document.getElementById('demo').innerHTML = 'Por los km ingresados se deberían cobrar: $' +sumar() + 'pesos'" class="btn btn-primary mb-2">Calcular tarifa</button>
         </form>
         <p>
             NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km, SI INGRESA
             UN KILOMETRAJE MAYOR, TOME ÚNICAMENTE COMO REFERENCIA.
         </p>
-        <button type="button" onclick="document.getElementById('demo').innerHTML = sumar()"> Click me to display Date and Time. </button>
         <h2 id="demo"></h2>
     </div>
     <script>
@@ -38,8 +37,8 @@
         //km = Math.round(30.159*Math.exp(0.0478*numero1)*2)/2;
         km = Math.round(29*Math.exp(Math.pow(0.0569*numero1, 0.89))*2)/2;
         return km;
-        console.log(Math.round(29*Math.exp(Math.pow(0.0569*numero1, 0.89))*2)/2);
-        alert("POR " + numero1 +" km SE DEBERÍAN COBRAR $" + km + " PESOS");
+        //console.log(Math.round(29*Math.exp(Math.pow(0.0569*numero1, 0.89))*2)/2);
+        //alert("POR " + numero1 +" km SE DEBERÍAN COBRAR $" + km + " PESOS");
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
