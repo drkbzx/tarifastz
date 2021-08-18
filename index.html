@@ -8,28 +8,29 @@
     <title>TARIFAS TRAGAZONE</title>
 </head>
 <body>
-    <div class="mx-auto" style="width: 90%; margin-top: 4cm;">
+    <div class="mx-auto" style="width: 90%; margin-top: 3.5cm;">
         <h1>CALCULADOR DE TARIFAS TRAGAZONE</h1>
         <div class="alert alert-primary" role="alert">
             <p>
-                Inserte los km marcados en Google Maps desde el establecimiento hacia el destino
+                Ingrese los <strong>km marcados en Google Maps</strong>  desde el establecimiento hacia el destino
             </p>
         </div>
         <form class="form-inline">
-            <input type="number" step="any" id="numero1" value= 0.0 autocomplete="off" class="form-control mb-2 mr-sm-2 input-lg" placeholder="Ingresa los km">
+            <input style="width: 80%; margin-left: 10%" type="number" step="any" id="numero1" value= 0.0 autocomplete="off" class="form-control mb-2 mr-sm-2 input-lg" placeholder="Ingresa los km">
             <div id="disv3"></div>
-            <div class="form-check mb-2 mr-sm-2" style="margin: 30px; margin-bottom: 25px;">
+            <div class="form-check mb-2 mr-sm-2">
                 <label class="form-check-label" for="inlineFormCheck">
                     ¿Es fuera de zona conurbada?
                 </label>
-            <input class="form-check-input" type="checkbox" id="fueraDeZona">
+                <input class="form-check-input" type="checkbox" id="fueraDeZona">
+            </div>
         </form>
         <div class="alert alert-success" role="alert" style="margin-top: 20px;">
             <h1 id="demo2"></h1>
         </div>
         <div class="alert alert-warning" role="alert" style="margin-top: 15px;">
             <p>
-                NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km, SI INGRESA
+                <strong>NOTA: TRAGAZONE ÚNICAMENTE HACE VALER ESTE TARIFARIO HASTA LOS 25km</strong>, SI INGRESA
                 UN KILOMETRAJE MAYOR, TOME ÚNICAMENTE COMO REFERENCIA.
             </p>
         </div>
